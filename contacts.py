@@ -49,3 +49,16 @@ elif choice == "1":
     name = input("Nhập tên: ")
     phone = input("Nhập số điện thoại: ")
     add_contact(name, phone)
+
+
+
+
+def search_contact():
+    name_to_find = input("Nhập tên cần tìm: ")
+
+    for contact in phonebook:
+        if contact['name'].lower() == name_to_find.lower():
+            print(f"🔎 Tìm thấy: {contact['name']} - {contact['phone']}")
+            return
+
+    print("❌ Không tìm thấy liên hệ.")
